@@ -1,0 +1,15 @@
+[project]
+name = "keepass_conflict_fixer"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "R1D3R175", email = "r1.d3.r175@gmail.com"},
+]
+dependencies = []
+requires-python = "==3.12.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false

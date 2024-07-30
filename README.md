@@ -16,3 +16,4 @@ The main purpose of this project is to handle the tedious task of fixing the var
 - Project structure
 - Doc generation
 - Logging, **configurable** *and* **meaningful**
+- Test-driven development

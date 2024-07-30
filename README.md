@@ -1,5 +1,6 @@
 # keepass_conflict_fixer
 [![pdm-managed](https://img.shields.io/endpoint?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fpdm-project%2F.github%2Fbadge.json)](https://pdm-project.org)
+
 Using Syncthing to keep your password database available on all your devices? Updated it without syncing beforehand? Ended up with `*sync-conflict*.kdbx` all over the place? Don't worry, this will fix it :)
 
 ## How it works
@@ -14,3 +15,4 @@ The main purpose of this project is to handle the tedious task of fixing the var
 - Testing, both unit and integration
 - Project structure
 - Doc generation
+- Logging, **configurable** *and* **meaningful**

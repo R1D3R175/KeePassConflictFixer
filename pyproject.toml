@@ -24,10 +24,15 @@ distribution = true
 [tool.pdm.dev-dependencies]
 test = [
     "pytest>=8.3.2",
+    "pytest-cov>=5.0.0",
 ]
 lint = [
     "pylint>=3.2.6",
 ]
 doc = [
     "sphinx>=8.0.0",
+]
+automation = [
+    "tox>=4.16.0",
+    "tox-pdm>=0.7.2",
 ]

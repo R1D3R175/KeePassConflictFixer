@@ -7,7 +7,8 @@ from pykeepass import create_database, PyKeePass
 
 
 def random_file(modified_time: float | None = None):
-  file = tempfile.NamedTemporaryFile(prefix='keepass_conflict_fixer_fixture')
+  file = tempfile.NamedTemporaryFile(
+    prefix='keepass_conflict_fixer_fixture', suffix='.kdbx')
 
   if isinstance(modified_time, float):
     os.utime(file.name, (modified_time, modified_time))

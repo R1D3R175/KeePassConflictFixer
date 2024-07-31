@@ -1,5 +1,6 @@
 # pylint: disable=missing-docstring, redefined-outer-name
 import os
+from pathlib import Path
 import time
 import tempfile
 import pytest
@@ -68,3 +69,15 @@ def new_database_with_foo_entry(empty_new_database: PyKeePass):
 def new_database_with_bar_entry(empty_new_database: PyKeePass):
   empty_new_database.add_entry('', 'Bar', 'bar', 'bar')
   return empty_new_database
+
+
+@pytest.fixture
+def database_directory(request, tmp_path):
+  to_remove = ('tmp_path_factory', 'tmp_path', 'request', 'database_directory')
+  for fixture in request.fixturenames:
+    if fixture not in to_remove and 'database' in fixture:
+      database = request.getfixturevalue(fixture)
+      database_path = Path(database.filename.name)
+      database_path.rename(tmp_path / database_path.name)
+
+  return tmp_path
